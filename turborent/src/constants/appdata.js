@@ -53,42 +53,42 @@ export const links = [
   export const exploreWorlds = [
     {
       id: "world-1",
-      imgUrl: "/planet-01.jpg",
-      title: "Secure, Dependable, and Opulent",
+      imgUrl: "/Vehicle-1.jpg",
+      title: "Secure, Dependable, and Comfortable",
       description:
-        "At Limolux, we understand your desires – a seasoned chauffeur behind the wheel, complemented by a flawlessly stylish ride.",
+        "At TurboRent, we understand your desires – a seasoned chauffeur behind the wheel, complemented by a flawlessly stylish ride.",
     },
     {
       id: "world-2",
-      imgUrl: "/planet-02.jpg",
+      imgUrl: "/Vehicle-2.jpg",
       title: "Vehicles For Any Occasion",
       description:
-        "From Unmatched Luxury to Spacious Comfort: Limolux Awaits Your Selection!",
+        "From Unmatched Luxury to Spacious Comfort: TurboRent Awaits Your Selection!",
     },
     {
       id: "world-3",
-      imgUrl: "/planet-03.jpg",
+      imgUrl: "/Vehicle-4.jpg",
       title: "Need Wedding Transportation?",
       description:
-        "On your wedding day, Limolux delivers the ultimate luxury ride for an unforgettable journey.",
+        "On your wedding day, TurboRent delivers the ultimate luxury ride for an unforgettable journey.",
     },
   ];
   
   export const homeCards = [
     {
-      img: "/home-car-1.jpg",
+      img: "/Vision.jpg",
       title: "Our Vision",
       description:
         "Transforming transportation with real-time vehicle tracking for peak efficiency and minimal downtime.",
     },
     {
-      img: "/car-6.jpg",
+      img: "/Mission.jpg",
       title: "Our Mission",
       description:
         "Empowering progress through innovative solutions and cutting-edge technology, our mission is to drive efficiency, enhance experiences, and create lasting value for our stakeholders.",
     },
     {
-      img: "/car-7.jpg",
+      img: "/Approach.jpg",
       title: "Our Approach",
       description:
         "Crafting success through a strategic and adaptive approach, we navigate challenges with creativity, innovation, and a commitment to excellence.",
@@ -136,14 +136,7 @@ export const links = [
       variant1: fadeIn("right", "tween", 0.2, 1),
       variant2: fadeIn("left", "tween", 0.2, 1),
     },
-    {
-      id: 6,
-      text: "Investigate Victoria's head wineries and shop bottling works, crossing from the Mornington Promontory to the Yarra Valley. Travel flawlessly and securely between these uncommon locations in our lavish driver driven vehicles. Whether it's a heartfelt event with an accomplice or a gathering experience, raise your involvement in Limolux, and do it with unequaled style.",
-      title: "Wine tours",
-      img: "/wine-tour.jpg",
-      variant1: fadeIn("left", "tween", 0.2, 1),
-      variant2: fadeIn("right", "tween", 0.2, 1),
-    },
+   
     {
       id: 7,
       text: "For the people who request only the best, entertain yourself with our top-level cars, guaranteeing your appearance radiates lavishness and complexity. Our premium fleet proudly showcases regarded models like the BMW 7 Series, Mercedes Benz S-Class, and Audi A8, among others, famous for their unparalleled solace and execution in the present market. Matched with our master drivers, you're in for a sumptuous and raised insight.",
