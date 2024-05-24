@@ -17,10 +17,10 @@ const Subfooter = () => {
             <MdCardTravel className="text-third-color" />
           </span>
           <div className="flex flex-col gap-2">
-            <h5 className="text-2xl text-gray-900 font-bold">Wedding</h5>
+            <h5 className="text-2xl text-gray-900 font-bold">Travel</h5>
             <p className="mb-4 text-base text-gray-500 border-l-4 border-third-color pl-4">
-              Seeking Wedding Transportation Services? Contact Us to Customize
-              Your Special Day!
+             Planning trip with your friends and family and need transportation?
+             We are here !
             </p>
           </div>
         </div>
