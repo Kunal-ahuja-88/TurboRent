@@ -185,7 +185,7 @@ export const links = [
       name: "Enter Ride Details",
     },
     {
-      name: "Choose a Vahicle",
+      name: "Choose a Vehicle",
     },
     {
       name: "Enter Contact Details",
