@@ -1,0 +1,53 @@
+"use client"
+import React from 'react'
+import { format } from "date-fns";
+import {
+    FormControl,
+    FormField,
+    FormItem,
+  } from "@/components/ui/form"
+import { Label } from './ui/label';
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue,
+  } from "@/components/ui/select"
+
+function SelectForm({control,id,label,placeholder,list}) {
+  return (
+   <div> 
+   <Label htmlFor={id} className="font-semibold text-md">{label}</Label>
+   <FormField
+          control={control}
+          name="email"
+          render={({ field }) => (
+            <FormItem>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder={placeholder} />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="m@example.com">m@example.com</SelectItem>
+                  <SelectItem value="m@google.com">m@google.com</SelectItem>
+                  <SelectItem value="m@support.com">m@support.com</SelectItem>
+                </SelectContent>
+              </Select>
+              <FormDescription>
+                You can manage email addresses in your{" "}
+                <Link href="/examples/forms">email settings</Link>.
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+         
+  /></div>
+  )
+}
+
+export default SelectForm
