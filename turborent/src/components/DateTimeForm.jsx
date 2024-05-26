@@ -26,7 +26,7 @@ function DateTimeForm({control,id,label}) {
     name={id}
     render={({ field }) => (
       <FormItem className="flex flex-col py-3">
-        <FormLabel>Date of birth</FormLabel>
+        <FormLabel>Date of journey</FormLabel>
         <Popover>
           <PopoverTrigger asChild>
             <FormControl>

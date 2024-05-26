@@ -42,6 +42,7 @@ const Booking = ({ searchParams }) => {
         </div>
       </div>
       {current===1 && <StepOne form = {form} />}
+      {current===2 && <Insights isForm={true} form = {form} />}
       <div className={`${
         current==4 ? "hidden":"flex"}
      } justify-between items-center mx-10 py-3`} >
