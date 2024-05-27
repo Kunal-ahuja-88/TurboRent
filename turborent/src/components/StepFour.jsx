@@ -39,9 +39,18 @@ const StepFour = ({ form }) => {
   }, [source, destination]);
 
   const Submit = async () => {
-    const url = await PaymentMethod({ ...form.getValues(), price });
-    router.push(url);
+    try {
+      const url = await PaymentMethod({ ...form.getValues(), price });
+      if (url && typeof url === 'string' && url.startsWith('http')) {
+        router.push(url);
+      } else {
+        console.error('Invalid URL:', url);
+      }
+    } catch (error) {
+      console.error('Error during submission:', error);
+    }
   };
+
   return (
     <div className="max-w-[1150px] mx-auto">
       <div className="grid grid-cols-1 p-4 mt-10">
