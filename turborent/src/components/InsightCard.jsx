@@ -23,7 +23,22 @@ const InsightCard = ({ imgUrl, title, subtitle, index, isForm, form }) => {
             <h4 className="font-extrabold text-slate-500 lg:text-[42px] text-[26px]">
               {title}
             </h4>
+            {isForm && <button onClick={()=>{
+              form.setValue("imgUrl",imgUrl);
+              form.setValue("title",title);
+              form.setValue("subtitle",subtitle);
+             router.push(`/booking?index=2&option=${index}`);
+            }}
+            className={`${
+                option == index
+                  ? "bg-third-color text-white"
+                  : "bg-slate-200 text-slate-500"
+              } h-12 teext-md px-7 rounded-full`}
+              disabled={option == index ? true : false}
+            >
             
+            Select
+            </button>}
           </div>
           <p className="mt-4 font-normal lg:text-lg text-sm text-slate-400">
             {subtitle}

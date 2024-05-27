@@ -4,6 +4,10 @@ import React from "react";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import StepOne from "@/components/StepOne";
+import Insights from "@/components/Insights";
+import Contact from "@/components/Contact";
+import StepFour from "@/components/StepFour";
+
 const Booking = ({ searchParams }) => {
     const form = useForm()
   const current = parseInt(searchParams.index) || 1;
@@ -43,9 +47,11 @@ const Booking = ({ searchParams }) => {
       </div>
       {current===1 && <StepOne form = {form} />}
       {current===2 && <Insights isForm={true} form = {form} />}
+      {current===3 && <Contact form = {form} />}
+      {current===3 && <StepFour form = {form} />}
       <div className={`${
         current==4 ? "hidden":"flex"}
-     } justify-between items-center mx-10 py-3`} >
+     } justify-between items-center mx-[10%] py-3`} >
           <button className="bg-slate-100 px-10 py-3 rounded-full">Back</button>
           <Link href={`/booking?index=${current+1}`}  className="bg-third-color text-white px-10 py-3 rounded-full">
           Next
