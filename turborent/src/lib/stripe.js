@@ -2,6 +2,7 @@
 
 import Order from "@/models/Order";
 import connect from "./database";
+
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 export const PaymentMethod = async (body) => {
@@ -12,7 +13,7 @@ export const PaymentMethod = async (body) => {
     const transformedItem = [
       {
         price_data: {
-          currency: "usd",
+          currency: "inr",
           product_data: {
             name: body.title,
           },
@@ -30,14 +31,11 @@ export const PaymentMethod = async (body) => {
       cancel_url: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/cancel`,
     });
 
-    if (session) {
-      return session.url;
-    } else {
-      console.error("Failed to create Stripe session");
-      return null;
-    }
+    console.log("Session object:", session);
+
+  
+    if (session) return session.url;
   } catch (error) {
-    console.error("Error in PaymentMethod:", error);
-    throw new Error("Payment processing failed");
+    console.log("something went wrong");
   }
 };

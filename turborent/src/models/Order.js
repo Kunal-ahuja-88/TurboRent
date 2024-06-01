@@ -59,7 +59,7 @@ const orderSchema = new Schema({
     },
     comment: {
       type: String,
-      required: true,
+      required: false,
       default: 'No comment provided'
     },
   });

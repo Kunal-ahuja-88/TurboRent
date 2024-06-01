@@ -22,8 +22,8 @@ const StepFour = ({ form }) => {
 
   useEffect(() => {
     if (source?.length && destination?.length) {
-      const sourceVal = source?.split(",");
-      const destinationVal = destination?.split(",");
+      const sourceVal = source.split(",");
+      const destinationVal = destination.split(",");
       const distanceInKM = getDistance(
         parseFloat(sourceVal[0]),
         parseFloat(sourceVal[1]),
@@ -31,25 +31,33 @@ const StepFour = ({ form }) => {
         parseFloat(destinationVal[1])
       );
       const finalPrice =
-        transfertype == "one way"
+        transfertype === "one way"
           ? parseInt(distanceInKM)
           : 2 * parseInt(distanceInKM);
       setPrice(finalPrice);
     }
-  }, [source, destination]);
+  }, [source, destination, transfertype]);
 
   const Submit = async () => {
     try {
-      const url = await PaymentMethod({ ...form.getValues(), price });
+      const formValues = form.getValues();
+      console.log("Form Values:", formValues);
+  
+      const url = await PaymentMethod({ ...formValues, price });
+      console.log("Payment URL:", url);
+  
       if (url && typeof url === 'string' && url.startsWith('http')) {
         router.push(url);
       } else {
-        console.error('Invalid URL:', url);
+        console.error("Invalid URL:", url);
+        
       }
     } catch (error) {
-      console.error('Error during submission:', error);
+      console.error("Error during submission:", error);
+      
     }
   };
+  
 
   return (
     <div className="max-w-[1150px] mx-auto">
@@ -59,7 +67,7 @@ const StepFour = ({ form }) => {
         </div>
         <div className="pt-8">
           <div className="flex justify-between items-center border-b mb-5 pb-5">
-            <h3 className="text-3xl font-bold ">{title}</h3>
+            <h3 className="text-3xl font-bold">{title}</h3>
             <p className="text-lg font-bold">
               Price: <span className="text-2xl">${price}</span>
             </p>

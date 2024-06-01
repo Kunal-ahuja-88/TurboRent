@@ -8,7 +8,8 @@ const Local = () => {
       <Banners
         img="/local-banner.jpg"
         title="Local Transfers"
-        text="Add to the memories on your big day with Code scrapper"
+        text=" Add to the memories on your big day with TurboRent"
+        
       />
       <div className="max-w-[1150px] mx-4 lg:mx-auto my-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -17,7 +18,7 @@ const Local = () => {
               Local Car Services
             </h1>
             <p className="leading-6 text-lg text-slate-400">
-              At Limolux, we comprehend the meaning of a vehicle administration
+              At TurboRent, we comprehend the meaning of a vehicle administration
               for your big day. <br />
               <br />
               Our wedding vehicles are carefully ready for an immaculate
